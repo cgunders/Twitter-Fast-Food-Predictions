@@ -1,13 +1,12 @@
 # Twitter-Fast-Food-Predictions
 
-### 1. Introduction
+## 1. Introduction
 
-Toward my goal of becoming a data scientist I started a personal project. I initially began with learning syntax and simple 
-algorithms through online coding quizzes. Eventually I ended up with the Kaggle Titanic dataset and progressed through the cleaning, feature engineering, data visualization, and machine learning. It was a good introduction to the process but I wanted to experiment with my own data collection and analysis. I decided to collect Twitter data as it is publicly available and contains a wealth of information that can be scraped from their website with relative ease. Some of this data is messy and must be cleaned up. Examples of this are tweets that contain non-ASCII characters, emojis, and web links. I had read several articles about how data scientists must collect or use data which is messy and must be cleaned into a usable format for analysis. I wanted to mimic this by collecting my own messy data set and cleaning it.
+Toward my goal of becoming a data scientist I started a personal project. I initially began with learning syntax and simple algorithms through online coding quizzes. Eventually I ended up with the Kaggle Titanic dataset and progressed through the cleaning, feature engineering, data visualization, and machine learning. It was a good introduction to the process but I wanted to experiment with my own data collection and analysis. I decided to collect Twitter data as it is publicly available and contains a wealth of information that can be scraped from their website with relative ease. Some of this data is messy and must be cleaned up. Examples of this are tweets that contain non-ASCII characters, emojis, and web links. I had read several articles about how data scientists must collect or use data which is messy and must be cleaned into a usable format for analysis. I wanted to mimic this by collecting my own messy data set and cleaning it.
   
 I wanted to address a question that I found interesting but could also be applicable from a business perspective. I wanted to categorize tweeters of fast food restaurants and develop a model that could determine which fast food chain or fast food category (burgers, fried chicken, pizza) an uncategorized tweeter would prefer. This is a simple model and has several assumptions to make it practical for me to complete. This idea, I assume, is used in targeted advertising across many social media platforms and is not new in any way. An example given by Twitter themselves is at: https://dev.twitter.com/ads/campaigns/targeting. 
   
-### 2. Method
+## 2. Method
  
 There are many articles available on the internet that discuss obtaining and dissecting Twitter data and for the most part they use the Twitter API which packages tweet and user data up into a JSON. I chose a different route, using Beautiful Soup to extract the data from the HTML on Twitter’s website. This is a more limited approach for obtaining Twitter data, but it can be broadly applied to any website on the internet, even if it lacks an API. There are articles using this method as well, which I used as a guide. 
   
@@ -15,7 +14,7 @@ Choosing to gather Twitter data without using their API presents a few problems.
     
 I chose this method to learn about more than just Twitter’s API. By constructing my own scraper I used different packages with a diverse range of applications that will aid me in future projects.
     
-### 3. Results
+## 3. Results
 
 | Query         |Fraction Positive|Fraction Neutral |Fraction Negative|
 |---------------|:---------------:|:---------------:|:---------------:|
