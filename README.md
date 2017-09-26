@@ -33,4 +33,4 @@ Sentiment analysis of TextBlob showed some big differences between the fast food
 |KFC            |0.309            |0.475            |0.216            |
 |Javascript     |0.355            |0.566            |0.079            |
 
-(https://github.com/cgunders/Twitter-Fast-Food-Predictions/blob/master/chickfilapcorr.png "Chick-fil-A Pearson Correlation")
+![alt text](https://github.com/cgunders/Twitter-Fast-Food-Predictions/blob/master/chickfilapcorr.png "Chick-fil-A Pearson Correlation")
