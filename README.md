@@ -51,4 +51,13 @@ I first separate out data from the full dataset based on having a positive polar
 
 ![alt text](https://github.com/cgunders/Twitter-Fast-Food-Predictions/blob/master/good_dfsPCAPlot.png "Scatter Plot of Principal Components of Queries")
 
-I then perform 
+I then use sklearn to perform some basic machine learning to make predictions about fast food preferences. I begin by creating a test data set by extracting some amount of tweets from the dataframes. These tweets are removed from the training data so that the algorithm will not see them until it is asked to predict what query they were part of later during the testing phase. I then train a logistic regression and random forest classifier on the training data then ask them to predict which fast food queries the test data tweets were originally a part of.
+
+| Query         |Logistic Regression|Random Forest|
+|---------------|:---------------:|:---------------:|
+|Burger King    |0.34             |0.48             |
+|McDonald's     |0.62             |0.52             |
+|Chick-fil-A    |0.4              |0.76             |
+|KFC            |0.12             |0.48             |
+|Javascript     |0.76             |0.8              |
+|Overall        |0.448            |0.608            |
