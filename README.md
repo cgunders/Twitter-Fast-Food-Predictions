@@ -19,7 +19,9 @@ I chose this method to learn about more than just Twitter’s API. By constructi
     
 ## 3. Results
 
-Features are engineered from the data 
+After scraping, features are engineered from the raw data. Features I use for principal component analysis (PCA) and machine learning are: number of retweets, number of replies, number of likes, number of hashtags, number of atreplies, tweet length, day of week, time of day, if the tweet contains a picture, if the tweet contains a link, if the tweeter is verified, and the subjectivity and polarity of the tweet as determined by sentiment analysis with TextBlob. 
+
+Sentiment analysis of TextBlob showed some big differences between the fast food queries and the javascript query. People talking about javascript tended to use more neutral and less negative words compared to the fast food queries.
 
 | Query         |Fraction Positive|Fraction Neutral |Fraction Negative|
 |---------------|:---------------:|:---------------:|:---------------:|
@@ -28,3 +30,5 @@ Features are engineered from the data
 |Chick-fil-A    |0.380            |0.446            |0.174            |
 |KFC            |0.309            |0.475            |0.216            |
 |Javascript     |0.355            |0.566            |0.079            |
+
+
