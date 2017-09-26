@@ -1,5 +1,7 @@
 # Twitter-Fast-Food-Predictions
 
+### 1. Introduction
+
 | Query         |Fraction Positive|Fraction Neutral |Fraction Negative|
 |---------------|:---------------:|:---------------:|:---------------:|
 |Burger King    |0.308            |0.526            |0.167            |
