@@ -64,3 +64,4 @@ I then use sklearn to perform some basic machine learning to make predictions ab
 |Javascript     |0.76             |0.8              |
 |Overall        |0.448            |0.608            |
 
+Both the logistic regression and the random forest can tell you with more certainty than guessing what the fast food preference of a tweeter is. The random forest is better and has an accurate prediction rate of 48% or more for each query. This is much better than randomly guessing for which you would expect a predictive success rate of about 20%. This is more than I had expected coming into this project. If I were to add in NLP looking for certain phrases, hashtags, atreplies, or other language nuances, I assume that the accuracy rate would be much higher. However, that is currently out of my scope of understanding but is very high on the to-do list.
