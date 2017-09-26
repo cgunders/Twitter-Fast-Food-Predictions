@@ -47,11 +47,13 @@ These types of feature relationships are the ones that I'm relying on for determ
 
 Another type of visualization I wanted to produce was a scatter plot to look at the clustering of different queries. I wanted to do this with a plotly interactive plot and was successful but found the large number of samples made the notebook slow and unresponsive. I instead define a "num_samples" variable which is the number of randomly chosen samples taken from each query dataframe to be plotted. This produces a less dense but similarly populated plot.
 
-I first separate out data from the full dataset based on having a positive polarity. This relies on the assumption that these tweets are by people who view the fast food (or javascript) favorably. Next, non-numerical features are dropped from the dataframes prior to PCA. PCA breaks down the features of each query into (in my case) 2 or 3 linear combinations of each feature. This allows me to plot the data points on a 2d or 3d plot to examine the clustering of different queries and how far they are from each other in this space. The interactive Plotly plots can be manipulated in the nbviewer rendering of the notebook found in the first link of the readme. I have displayed here a plot with the positive polarity Javascript and Chick-fil-A data points plotted to illustrate the differences in clustering between the two. The fast food data points largely overlapped.
+I first separate out data from the full dataset based on having a positive polarity. This relies on the assumption that these tweets are by people who view the fast food (or javascript) favorably. Next, non-numerical features are dropped from the dataframes prior to PCA. PCA breaks down the features of each query into (in my case) 2 or 3 linear combinations of each feature. This allows me to plot the data points on a 2d or 3d plot to examine the clustering of different queries and how far they are from each other in this space.I have displayed here a plot with the positive polarity Javascript and Chick-fil-A data points plotted to illustrate the differences in clustering between the two. The fast food data points largely overlapped.
+
+The interactive Plotly plots can be manipulated in the nbviewer rendering of the notebook found in the first link of the readme. 
 
 ![alt text](https://github.com/cgunders/Twitter-Fast-Food-Predictions/blob/master/good_dfsPCAPlot.png "Scatter Plot of Principal Components of Queries")
 
-I then use sklearn to perform some basic machine learning to make predictions about fast food preferences. I begin by creating a test data set by extracting some amount of tweets from the dataframes. These tweets are removed from the training data so that the algorithm will not see them until it is asked to predict what query they were part of later during the testing phase. I then train a logistic regression and random forest classifier on the training data then ask them to predict which fast food queries the test data tweets were originally a part of.
+I then use sklearn to perform some basic machine learning to make predictions about fast food preferences. I begin by creating a test data set by extracting some amount of tweets from the dataframes. These tweets are removed from the training data so that the algorithm will not see them until it is asked to predict what query they were part of later during the testing phase. I then train a logistic regression and random forest classifier on the training data then ask them to predict which fast food queries the test data tweets were originally a part of. Displayed below are the results of a single run of each trained algorithm on the randomly selected test data. The fraction displayed is the fraction of the query that was accurately predicted.
 
 | Query         |Logistic Regression|Random Forest|
 |---------------|:---------------:|:---------------:|
@@ -61,3 +63,4 @@ I then use sklearn to perform some basic machine learning to make predictions ab
 |KFC            |0.12             |0.48             |
 |Javascript     |0.76             |0.8              |
 |Overall        |0.448            |0.608            |
+
