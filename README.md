@@ -1,5 +1,8 @@
 # Twitter-Fast-Food-Predictions
 
+To look at all the code and steps view the notebook using nbviewer: 
+https://nbviewer.jupyter.org/github/cgunders/Twitter-Fast-Food-Predictions/blob/master/Twitter-Fast-Food-Predictions.ipynb
+
 ## 1. Introduction
 
 Toward my goal of becoming a data scientist I started a personal project. I initially began with learning syntax and simple algorithms through online coding quizzes. Eventually I ended up with the Kaggle Titanic dataset and progressed through the cleaning, feature engineering, data visualization, and machine learning. It was a good introduction to the process but I wanted to experiment with my own data collection and analysis. I decided to collect Twitter data as it is publicly available and contains a wealth of information that can be scraped from their website with relative ease. Some of this data is messy and must be cleaned up. Examples of this are tweets that contain non-ASCII characters, emojis, and web links. I had read several articles about how data scientists must collect or use data which is messy and must be cleaned into a usable format for analysis. I wanted to mimic this by collecting my own messy data set and cleaning it.
@@ -15,6 +18,8 @@ Choosing to gather Twitter data without using their API presents a few problems.
 I chose this method to learn about more than just Twitter’s API. By constructing my own scraper I used different packages with a diverse range of applications that will aid me in future projects.
     
 ## 3. Results
+
+Features are engineered from the data 
 
 | Query         |Fraction Positive|Fraction Neutral |Fraction Negative|
 |---------------|:---------------:|:---------------:|:---------------:|
