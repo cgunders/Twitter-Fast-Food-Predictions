@@ -33,8 +33,22 @@ Sentiment analysis of TextBlob showed some big differences between the fast food
 |KFC            |0.309            |0.475            |0.216            |
 |Javascript     |0.355            |0.566            |0.079            |
 
+Some other differences between the queries could be found by looking at the correlation of various features. Javascript again appeared very differently from the other queries.
+
 ![alt text](https://github.com/cgunders/Twitter-Fast-Food-Predictions/blob/master/chickfilapcorr.png "Chick-fil-A Pearson Correlation")
 
 ![alt text](https://github.com/cgunders/Twitter-Fast-Food-Predictions/blob/master/javascriptpcorr.png "Javascript Pearson Correlation")
 
+Some differences between queries can be seen. For instance, there is a high correlation between polarity and subjectivity for javascript (0.44). For McDonald's and Chick-fil-A this correlation is lower (0.2 and 0.13) and for KFC and Burger King there is no correlation (less than 0.1).
+
+Another example is the relationship between retweets, likes, and replies. The correlation between these three features is very high for javascript queries and less so for fast food tweets.
+
+These types of feature relationships are the ones that I'm relying on for determining the fast food preferences of tweets despite ignoring NLP data of tweets outside of sentiment analysis.
+
+Another type of visualization I wanted to produce was a scatter plot to look at the clustering of different queries. I wanted to do this with a plotly interactive plot and was successful but found the large number of samples made the notebook slow and unresponsive. I instead define a "num_samples" variable which is the number of randomly chosen samples taken from each query dataframe to be plotted. This produces a less dense but similarly populated plot.
+
+Non-numerical features are dropped from the dataframes prior to principal component analysis (PCA). PCA breaks down the features of each query into (in my case) 2 or 3 linear combinations of each feature. This allows me to plot the data points on a 2d or 3d plot to examine the clustering of different queries and how far they are from each other in this space. The interactive Plotly plots can be manipulated in the nbviewer rendering of the notebook found in the first link of the readme. I have displayed here a plot with the Javascript and Chick-fil-A data points plotted to illustrate the differences in clustering between the two. The fast food data points largely overlapped.
+
 ![alt text](https://github.com/cgunders/Twitter-Fast-Food-Predictions/blob/master/good_dfsPCAPlot.png "Scatter Plot of Principal Components of Queries")
+
+
