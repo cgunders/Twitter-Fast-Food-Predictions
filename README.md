@@ -16,6 +16,8 @@ There are many articles available on the internet that discuss obtaining and dis
 Choosing to gather Twitter data without using their API presents a few problems. Notably, Twitter only loads 20 tweets on the initial query and a user must scroll down to load more. To circumvent this problem, it is common to use Selenium to control a web browser and mimic a user scrolling through tweets. When the desired number of tweets have been loaded the HTML document is parsed with Beautiful Soup and data is extracted. I also used Joblib to run multiple instances of my scraper in parallel. With four cores available on my laptop this sped up data acquisition by a factor of about 4.
     
 I chose this method to learn about more than just Twitter’s API. By constructing my own scraper I used different packages with a diverse range of applications that will aid me in future projects.
+
+The Twitter scraper that I wrote can be found at: https://github.com/cgunders/Beautiful-Soup-Selenium-Twitter-Scraper
     
 ## 3. Results
 
